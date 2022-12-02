@@ -3,15 +3,17 @@ import time
 
 
 def solve_part1(input):
+    calc_score = lambda a,b : (((b-a)%-3)+3)%3
     score = 0
     for (a, b) in input:
-        score += b
-        # determine outcome
-        if a == b:
-            # draw
-            score += 3
-        elif b == (a % 3)+1:
-            score += 6
+        score += b+(3+calc_score(a,b)*3)%9
+        # score += b
+        # # determine outcome
+        # if a == b:
+        #     # draw
+        #     score += 3
+        # elif b == (a % 3)+1:
+        #     score += 6
 
     return score
 
@@ -24,7 +26,7 @@ def solve_part2(input):
         elif b == 3:  # win
             score += (6 + (a % 3) + 1)
         else:  # lose
-            score += ((a-1)+2) % 3+1
+            score += (a+1) % 3+1
     return score
 
 
