@@ -26,9 +26,9 @@ def main():
     part2 = sum(map(overlap, rgs))
 
     duration = int((time.time() - start_time) * 1000000)
-    header = "#" * 20
+    header = "#" * 21
     print(
-        f"{header}\n*AoC {year} - Day {day} *\n{header}\n\nPart 1:\t{part1}\nPart 2:\t{part2}\nTime:\t{duration // 1000} ms")
+        f"{header}\n* AoC {year} - Day {day} *\n{header}\n\nPart 1:\t{part1}\nPart 2:\t{part2}\nTime:\t{duration // 1000} ms")
 
 
 if __name__ == "__main__":
