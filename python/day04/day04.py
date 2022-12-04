@@ -15,10 +15,8 @@ def main():
         lines = f.read().splitlines()
 
     start_time = time.time()
-    rgs = []
 
-    for l in lines:
-        rgs.append(list(map(int, re.split('-|,', l))))
+    rgs = [list(map(int, re.split('-|,', l))) for l in lines]
 
     def contains(r): return (r[0] >= r[2] and r[1] <= r[3]) or (
         r[2] >= r[0] and r[3] <= r[1])
