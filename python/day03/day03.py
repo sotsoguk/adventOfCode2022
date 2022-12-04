@@ -1,18 +1,16 @@
 import os
 import time
-from string import ascii_lowercase, ascii_uppercase
+from string import ascii_letters
 
 
 def calc_priority(character):
-    if character in ascii_lowercase:
-        return (ord(character)-96)
-    elif character in ascii_uppercase:
-        return (ord(character)-38)
+    return ascii_letters.index(character) + 1
 
 
 def solve_part1(rucksack):
+    rucksack_split = len(rucksack)//2
     rucksack_sets = map(
-        set, [rucksack[:len(rucksack)//2], rucksack[len(rucksack)//2:]])
+        set, [rucksack[:rucksack_split], rucksack[rucksack_split:]])
     return calc_priority(set.intersection(*rucksack_sets).pop())
 
 
