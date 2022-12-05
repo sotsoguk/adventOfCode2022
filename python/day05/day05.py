@@ -33,21 +33,22 @@ def main():
     commands = [list(map(int, [c.split(' ')[i] for i in [1, 3, 5]]))
                 for c in lines[1].splitlines()]
 
-    def run_command(command, stack_set, cargo_9001 = False):
+    def run_command(command, stack_set, cargo_9001=False):
         (num, source, dest) = command
         if cargo_9001:
             stack_set[dest-1].extend(stack_set[source-1][-num:])
         else:
             stack_set[dest-1].extend(reversed(stack_set[source-1][-num:]))
         del stack_set[source-1][len(stack_set[source-1])-num:]
-  
+
     for c in commands:
         run_command(c, stacks)
         run_command(c, stacks2, cargo_9001=True)
 
     # create ouput
-    part1 = ''.join([s.pop() for s in stacks])
-    part2 = ''.join([s.pop() for s in stacks2])
+    def create_output(stack_set): return ''.join([s.pop() for s in stack_set])
+    part1 = create_output(stacks)
+    part2 = create_output(stacks2)
 
     duration = int((time.time() - start_time) * 1000000)
     header = "#" * 21
