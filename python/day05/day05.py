@@ -33,19 +33,17 @@ def main():
     commands = [list(map(int, [c.split(' ')[i] for i in [1, 3, 5]]))
                 for c in lines[1].splitlines()]
 
-    def run_command_9000(command, stack_set):
+    def run_command(command, stack_set, cargo_9001 = False):
         (num, source, dest) = command
-        for i in range(num):
-            stack_set[dest-1].append(stack_set[source-1].pop())
-
-    def run_command_9001(command, stack_set):
-        (num, source, dest) = command
-        stack_set[dest-1].extend(stack_set[source-1][-num:])
+        if cargo_9001:
+            stack_set[dest-1].extend(stack_set[source-1][-num:])
+        else:
+            stack_set[dest-1].extend(reversed(stack_set[source-1][-num:]))
         del stack_set[source-1][len(stack_set[source-1])-num:]
-
+  
     for c in commands:
-        run_command_9000(c, stacks)
-        run_command_9001(c, stacks2)
+        run_command(c, stacks)
+        run_command(c, stacks2, cargo_9001=True)
 
     # create ouput
     part1 = ''.join([s.pop() for s in stacks])
