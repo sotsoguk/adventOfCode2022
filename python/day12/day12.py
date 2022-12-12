@@ -54,15 +54,6 @@ def main():
     start_time = time.time()
     rows, cols = len(lines), len(lines[0])
 
-    # def get_neighbours(pos):
-    #     possible_n = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-    #     neighs = []
-    #     for pn in possible_n:
-    #         xp = pos[0] + pn[0]
-    #         yp = pos[1] + pn[1]
-    #         if (xp >= 0 and xp < cols and yp >= 0 and yp < rows):
-    #             neighs.append((xp, yp))
-    #     return neighs
     start, goal = (0, 0), (0, 0)
     start_points = []
     grid = [[(0, -1) for _ in range(cols)] for _ in range(rows)]
@@ -81,10 +72,10 @@ def main():
     start_points.append(start)
 
     part1 = find_shortest_path(start_points[-1], goal, deepcopy(grid))
-    # steps = []
-    # for sp in start_points:
-    #     steps.append(find_shortest_path(sp, goal, deepcopy(grid)))
-    # part2 = min([s for s in steps if s > 0]) # filter out impossible positions
+    steps = []
+    for sp in start_points:
+        steps.append(find_shortest_path(sp, goal, deepcopy(grid)))
+    part2 = min([s for s in steps if s > 0])  # filter out impossible positions
 
     duration = int((time.time() - start_time) * 1000000)
 
