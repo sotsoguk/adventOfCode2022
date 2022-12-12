@@ -1,6 +1,6 @@
-![](https://img.shields.io/badge/stars%20⭐-14-yellow)
-![](https://img.shields.io/badge/day%20📅-08-blue) 
-![](https://img.shields.io/badge/days%20completed-07-red)
+![](https://img.shields.io/badge/stars%20⭐-18-yellow)
+![](https://img.shields.io/badge/day%20📅-12-blue) 
+![](https://img.shields.io/badge/days%20completed-09-red)
 
 # Advent of Code 2022
 
@@ -17,3 +17,7 @@ This repo contains the 2022 [Advent Of Code 2022](https://adventofcode.com/2022)
 | 05 | [Supply Stacks](https://adventofcode.com/2022/day/5)| [day05.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day05/day05.py)|
 | 06 | [Tuning Trouble](https://adventofcode.com/2022/day/6) | [day06.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day06/day06.py)|
 | 08 | [Treetop Tree House](https://adventofcode.com/2022/day/8)| [day08.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day08/day08.py)|
+| 09 | [Rope Bridge](https://adventofcode.com/2022/day/9)| |
+| 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10) | [day10.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day10/day10.py) |
+| 11 | [Monkey in the Middle](https://adventofcode.com/2022/day/11)| |
+| 12 | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12)| [day12.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day12/day12.py)|
