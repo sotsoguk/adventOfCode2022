@@ -38,6 +38,47 @@ def find_shortest_path(start, goal, grid):
                 queue.append(n)
     return grid[goal[1]][goal[0]][1]
 
+def find_shortest_path_2(start,grid):
+    rows, cols = len(grid), len(grid[0])
+
+    def get_neighbours(pos):
+        possible_positions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        positions = []
+        for p in possible_positions:
+            possible_x = pos[0] + p[0]
+            possible_y = pos[1] + p[1]
+            if (possible_x >= 0 and possible_x < cols and possible_y >= 0 and possible_y < rows):
+                positions.append((possible_x, possible_y))
+        return positions
+
+    grid[start[1]][start[0]] = (26, 0)
+    queue = deque()
+    queue.append(start)
+
+    while len(queue) > 0:
+        curr_pos = queue.popleft()
+        curr_x, curr_y = curr_pos[0], curr_pos[1]
+        curr_height, curr_steps = grid[curr_y][curr_x]
+        possible_neighbors = get_neighbours(curr_pos)
+
+        for n in possible_neighbors:
+            to_height, to_steps = grid[n[1]][n[0]]
+            if to_steps >= 0 and to_steps <= (curr_steps + 1):
+                continue
+            elif to_height >= curr_height - 1:
+                grid[n[1]][n[0]] = (to_height, curr_steps+1)
+                queue.append(n)
+    # find all a's
+    starts = []
+    for row in grid:
+        for (v,steps) in row:
+            if v==1:
+                starts.append(steps)
+    
+    print(sorted(starts))
+    # print(list(filter(lambda b:b>0,[x for (y,x) in row for row in grid if y==1])))
+    print(sorted([x for (y,x) in row for row in grid ]))
+    
 
 def main():
     # input
@@ -72,11 +113,11 @@ def main():
     start_points.append(start)
 
     part1 = find_shortest_path(start_points[-1], goal, deepcopy(grid))
-    steps = []
-    for sp in start_points:
-        steps.append(find_shortest_path(sp, goal, deepcopy(grid)))
-    part2 = min([s for s in steps if s > 0])  # filter out impossible positions
-
+    # steps = []
+    # for sp in start_points:
+    #     steps.append(find_shortest_path(sp, goal, deepcopy(grid)))
+    # part2 = min([s for s in steps if s > 0])  # filter out impossible positions
+    part2 = find_shortest_path_2(goal,deepcopy(grid))
     duration = int((time.time() - start_time) * 1000000)
 
     header = "#" * 21
