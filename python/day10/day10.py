@@ -10,7 +10,7 @@ def main():
     print(os.getcwd())
     day = "10"
     year = "2022"
-    debug = False
+    debug = True
     input_file = f'../inputs/day{day}{"_debug" if debug else ""}.txt'
     print(input_file)
     part1, part2 = 0, 0
@@ -52,6 +52,6 @@ def main():
     print(
         f"{header}\n* AoC {year} - Day {day} *\n{header}\n\nPart 1:\t{part1}\nPart 2:\t{part2}\nTime:\t{duration // 1000} ms")
 
-
+    for r in register_values: print(r)
 if __name__ == "__main__":
     main()
