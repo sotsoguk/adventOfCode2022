@@ -18,7 +18,7 @@ This repo contains the 2022 [Advent Of Code 2022](https://adventofcode.com/2022)
 | 06 | [Tuning Trouble](https://adventofcode.com/2022/day/6) | [day06.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day06/day06.py), [day06.js](https://github.com/sotsoguk/adventOfCode2022/blob/main/js/day06/day06.js)|
 | 08 | [Treetop Tree House](https://adventofcode.com/2022/day/8)| [day08.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day08/day08.py)|
 | 09 | [Rope Bridge](https://adventofcode.com/2022/day/9)| |
-| 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10) | [day10.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day10/day10.py) |
+| 10 | [Cathode-Ray Tube](https://adventofcode.com/2022/day/10) | [day10.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day10/day10.py). [day10.js](https://github.com/sotsoguk/adventOfCode2022/blob/main/js/day10/day10.js) |
 | 11 | [Monkey in the Middle](https://adventofcode.com/2022/day/11)| |
 | 12 | [Hill Climbing Algorithm](https://adventofcode.com/2022/day/12)| [day12.py](https://github.com/sotsoguk/adventOfCode2022/blob/main/python/day12/day12.py)|
 | 25 | [Full of Hot Air](https://adventofcode.com/2022/day/25)|[day25.js](https://github.com/sotsoguk/adventOfCode2022/blob/main/js/day25/day25.js)|
