@@ -6,6 +6,7 @@
 
 This repo contains the 2022 [Advent Of Code 2022](https://adventofcode.com/2022) solutions.
 
+
 ## Problems
 
 | Day | Problem | Solution |
