@@ -2,7 +2,6 @@ import os
 import time
 import heapq
 
-
 def main():
 
     # input
